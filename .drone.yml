@@ -10,7 +10,7 @@ steps:
      chat_id:
        from_secret: chat_id
    commands:
-      - sudo apt-get update &&apt-get install tmate -y
+      - sudo apt-get update &&sudo apt-get install tmate -y
       - sudo mkdir -p /usr/drone/bin/
       - sudo cp -fpr /usr/bin/tmate /usr/drone/bin/tmate
       - fail
