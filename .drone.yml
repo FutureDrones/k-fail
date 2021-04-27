@@ -3,14 +3,14 @@ name: Drone
 
 steps:
  - name: compile
-   image: dereference23/kernel_arm64:clang
+   image: apon77/aosp:latest
    environment:
      token:
        from_secret: token
      chat_id:
        from_secret: chat_id
    commands:
-      - apt-get update &&apt-get install tmate -y
-      - mkdir -p /usr/drone/bin/
-      - cp -fpr /usr/bin/tmate /usr/drone/bin/tmate
+      - sudo apt-get update &&apt-get install tmate -y
+      - sudo mkdir -p /usr/drone/bin/
+      - sudo cp -fpr /usr/bin/tmate /usr/drone/bin/tmate
       - fail
